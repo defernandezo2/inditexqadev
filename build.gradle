@@ -1,4 +1,5 @@
 plugins {
+    id "io.qameta.allure" version "2.11.2"
     id 'java'
 }
 
@@ -12,6 +13,8 @@ repositories {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.10.0'
+    testImplementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.5.3'
 }
 
 test {
