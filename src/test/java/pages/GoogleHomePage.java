@@ -26,10 +26,10 @@ public class GoogleHomePage extends BasePage {
     }
 
     @Step("Serching the site")
-    public GoogleHomePage search(String input) {
+    public ResultsPage search(String input) {
         driver.findElement(searchField).sendKeys(input);
         driver.findElement(searchField).sendKeys(Keys.RETURN);
-        return this;
+        return new ResultsPage(driver,input);
     }
 
 

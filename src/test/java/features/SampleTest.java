@@ -7,6 +7,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import pages.GoogleHomePage;
+import pages.ResultsPage;
+import pages.WikipiediPage;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class SampleTest extends BaseTest {
@@ -25,8 +27,9 @@ public class SampleTest extends BaseTest {
     @Description("Simple test from youtube")
     public void searchSampleTest() {
         googleHomePage.clickOnAcceptCookies();
-        googleHomePage.search("automatizacion");
-
+        ResultsPage resultsPage = googleHomePage.search("automatizacion");
+        WikipiediPage wikipiediPage = resultsPage.clickOnWikipediaPage();
+        wikipiediPage.assertYear("270 a. C");
     }
 
     @AfterAll
