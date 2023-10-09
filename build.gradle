@@ -15,6 +15,16 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     testImplementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.10.0'
     testImplementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.5.3'
+    testImplementation 'io.rest-assured:rest-assured:5.3.2'
+    testImplementation 'io.rest-assured:json-path:5.3.2'
+    testImplementation 'io.rest-assured:xml-path:5.3.2'
+    testImplementation 'io.rest-assured:json-schema-validator:5.3.2'
+    testImplementation 'io.rest-assured:spring-mock-mvc:5.3.2'
+    testImplementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+    testImplementation group: 'com.github.javafaker', name: 'javafaker', version: '0.15'
+    testImplementation group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '2.3.4'
+    testImplementation group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+
 }
 
 test {

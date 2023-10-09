@@ -11,7 +11,7 @@ import pages.ResultsPage;
 import pages.WikipiediPage;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class SampleTest extends BaseTest {
+public class WikipediaTest extends BaseSeleniumTest {
 
     private GoogleHomePage googleHomePage;
 
@@ -24,7 +24,7 @@ public class SampleTest extends BaseTest {
     }
 
     @Test
-    @Description("Simple test from youtube")
+    @Description("Users search the world automatizacion in google and goes to the first wikipedia link and asserts the year of the first automation")
     public void searchSampleTest() {
         googleHomePage.clickOnAcceptCookies();
         ResultsPage resultsPage = googleHomePage.search("automatizacion");
